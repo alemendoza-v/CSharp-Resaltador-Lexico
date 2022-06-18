@@ -1,0 +1,16 @@
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\bin\Debug\net5.0\app.exe
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\bin\Debug\net5.0\app.deps.json
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\bin\Debug\net5.0\app.runtimeconfig.json
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\bin\Debug\net5.0\app.runtimeconfig.dev.json
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\bin\Debug\net5.0\app.dll
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\bin\Debug\net5.0\ref\app.dll
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\bin\Debug\net5.0\app.pdb
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\obj\Debug\net5.0\app.csproj.AssemblyReference.cache
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\obj\Debug\net5.0\app.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\obj\Debug\net5.0\app.AssemblyInfoInputs.cache
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\obj\Debug\net5.0\app.AssemblyInfo.cs
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\obj\Debug\net5.0\app.csproj.CoreCompileInputs.cache
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\obj\Debug\net5.0\app.dll
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\obj\Debug\net5.0\ref\app.dll
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\obj\Debug\net5.0\app.pdb
+D:\Documents\Tec\Cuarto Semestre\Materias\Implementación de métodos computacionales\Resaltador Lexico\CSharp-Resaltador-Lexico\app\obj\Debug\net5.0\app.genruntimeconfig.cache
