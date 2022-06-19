@@ -38,10 +38,7 @@ namespace app
             else if(c == ";"){
                 return 42;
             }
-            else {
-                return 43;
-            }
-            
+            else return 43;
         }
 
         static void lex(string input)
@@ -96,27 +93,79 @@ namespace app
         };
 
             int index = 0;
+            List<string> otherWord = new List<string>();
             while(index < input.Length) {
-                int state = 0;
+                int state = 0, lastState = 0;
                 List<string> word = new List<string>();
+                List<string> tempWord = new List<string>();
+                bool badword = false;
+                int[] finalStates = new int[] {101, 102, 103, 104, 105, 106, 201, 202, 301, 302, 303};
 
                 while(index < input.Length && state < 35) {
-                    string c = input[index].ToString();
+                    string c = input[index].ToString(); //tchar int
                     index++;
+                    // if (c == " "){
+                    //     if(Array.IndexOf(finalStates, state) < 0 && badword){
+                    //         foreach(string miniw in tempWord){
+                    //             otherWord.Add(miniw);
+                    //         }
+                    //         break;
+                    //     }
+                    //     foreach(string miniw in tempWord){
+                    //         word.Add(miniw);
+                    //     }
+                    //     word.Add(c);             //int papa = 69 ;
+                    //     break;
+                    // }
                     state = transitionMatrix[state, filter(c)];
-                    if(state == E) break;
-                    if(state != 0) word.Add(c);
+                    if(state == E) {
+                        otherWord.Add(c);
+                        badword = true;
+                    }
+                    if(state != 0) {
+                        if(lastState == 0) {
+                            lastState = state;
+                            tempWord.Add(c);
+                        }                               //si no hay estado anterior = estado
+                        else {
+                            if(state == (lastState + 1)) {
+                                tempWord.Add(c);
+                                lastState++;
+                            }
+                            /*
+                            else {
+                                otherWord.Add(c);
+                            }
+                            */
+                        }
+                        if(Array.IndexOf(finalStates, state) > 0 || c == " "){
+                            foreach(string miniw in tempWord){
+                                word.Add(miniw);
+                            }
+                            word.Add(c);
+                            break;
+                        }
+                    }
                 }
                 foreach(var i in word)
                 {
                     Console.WriteLine(i);
                 }
             }
+            
+            Console.WriteLine("\nOther words");
+            foreach(var i in otherWord)
+            {
+                Console.WriteLine(i);
+            }
+            
         }
 
         static void Main(string[] args)
         {
-            lex("bool papa = true;");
+            //lex("bool papa = true;");
+            lex("6;");
+            //lex("string chisme = \"cojme\";");
         }
     }
 }
