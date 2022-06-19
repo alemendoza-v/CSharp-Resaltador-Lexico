@@ -131,13 +131,28 @@ namespace app
 
         static void Main(string[] args)
         {
-            // lex("bool papa = true;");
-            // lex("bool g = true;");
-            // lex("int jijijija = 69;");
-            // lex("string chisme = \"cojme\";");
-            // lex("bool faraon love shady = true;");
-            // lex("string goldi int kofi = \"amor\";");
-            // lex("char yupi = 'q';");
+            Console.WriteLine("Prueba 1: (Input = bool isConfirmed = true;)");
+            lex("bool isConfirmed = true;");
+            Console.WriteLine("----------------------------------------------");
+
+            Console.WriteLine("Prueba 2: (Input = int num = 16;)");
+            lex("int num = 16;");
+            Console.WriteLine("----------------------------------------------");
+
+            Console.WriteLine("Prueba 3: (Input = string password = \"hola\";)");
+            lex("string password = \"hola\";");
+            Console.WriteLine("----------------------------------------------");
+
+            Console.WriteLine("Prueba 4: (Input = bool esta confirmado = false;)");
+            lex("bool esta confirmado = false;");
+            Console.WriteLine("----------------------------------------------");
+
+            Console.WriteLine("Prueba 5: (Input = string goldi int kofi = \"uwu\";)");
+            lex("string goldi int kofi = \"uwu\";");
+            Console.WriteLine("----------------------------------------------");
+
+            Console.WriteLine("Prueba 6: (Input = char letra = 'q';)");
+            lex("char letra = 'q';");
         }
     }
 }
