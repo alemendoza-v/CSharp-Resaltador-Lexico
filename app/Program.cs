@@ -11,13 +11,12 @@ namespace app
         public static int filter(string c)
         {
             string[] abc = new string[] {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"}; //26
-            int[] numbs = new int[] {0,1,2,3,4,5,6,7,8,9}; //10
-            //,space,+,-,=,',"""",;
+            string[] numbs = new string[] {"0","1","2","3","4","5","6","7","8","9"}; //10
 
-            if (Array.IndexOf(abc, c) > 0){
+            if (Array.IndexOf(abc, c) >= 0){
                 return Array.IndexOf(abc, c);
             }
-            else if(Array.IndexOf(numbs, c) > 0){
+            else if(Array.IndexOf(numbs, c) >= 0){
                 return Array.IndexOf(numbs, c) + abc.Length + 1;
             }
             else if(c == " "){
@@ -39,6 +38,14 @@ namespace app
                 return 42;
             }
             else return 43;
+        }
+
+        public static string listToString(List<string> l) {
+            string newString = "";
+            foreach(string s in l){
+                newString += s;
+            }
+            return newString;
         }
 
         static void lex(string input)
@@ -94,78 +101,43 @@ namespace app
 
             int index = 0;
             List<string> otherWord = new List<string>();
+            List<string> tokens = new List<string>();
             while(index < input.Length) {
-                int state = 0, lastState = 0;
-                List<string> word = new List<string>();
-                List<string> tempWord = new List<string>();
-                bool badword = false;
-                int[] finalStates = new int[] {101, 102, 103, 104, 105, 106, 201, 202, 301, 302, 303};
+                int state = 0;
+                string word = "";
 
                 while(index < input.Length && state < 35) {
-                    string c = input[index].ToString(); //tchar int
+                    string c = input[index].ToString(); 
                     index++;
-                    // if (c == " "){
-                    //     if(Array.IndexOf(finalStates, state) < 0 && badword){
-                    //         foreach(string miniw in tempWord){
-                    //             otherWord.Add(miniw);
-                    //         }
-                    //         break;
-                    //     }
-                    //     foreach(string miniw in tempWord){
-                    //         word.Add(miniw);
-                    //     }
-                    //     word.Add(c);             //int papa = 69 ;
-                    //     break;
-                    // }
                     state = transitionMatrix[state, filter(c)];
-                    if(state == E) {
-                        otherWord.Add(c);
-                        badword = true;
-                    }
-                    if(state != 0) {
-                        if(lastState == 0) {
-                            lastState = state;
-                            tempWord.Add(c);
-                        }                               //si no hay estado anterior = estado
-                        else {
-                            if(state == (lastState + 1)) {
-                                tempWord.Add(c);
-                                lastState++;
-                            }
-                            /*
-                            else {
-                                otherWord.Add(c);
-                            }
-                            */
-                        }
-                        if(Array.IndexOf(finalStates, state) > 0 || c == " "){
-                            foreach(string miniw in tempWord){
-                                word.Add(miniw);
-                            }
-                            word.Add(c);
-                            break;
-                        }
-                    }
+                    word += c;
                 }
-                foreach(var i in word)
-                {
-                    Console.WriteLine(i);
+
+                if (state >= 100 && state != E && word != "") {
+                    tokens.Add(word);
+                } else if (word != "") {
+                    otherWord.Add(word);
                 }
             }
             
-            Console.WriteLine("\nOther words");
-            foreach(var i in otherWord)
+            Console.WriteLine("Tokens:");
+            foreach(var s in tokens)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(s);
             }
-            
+            Console.WriteLine("\nOther words");
+            Console.WriteLine(listToString(otherWord));
         }
 
         static void Main(string[] args)
         {
-            //lex("bool papa = true;");
-            lex("6;");
-            //lex("string chisme = \"cojme\";");
+            // lex("bool papa = true;");
+            // lex("bool g = true;");
+            // lex("int jijijija = 69;");
+            // lex("string chisme = \"cojme\";");
+            // lex("bool faraon love shady = true;");
+            // lex("string goldi int kofi = \"amor\";");
+            // lex("char yupi = 'q';");
         }
     }
 }
